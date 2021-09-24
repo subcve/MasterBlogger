@@ -19,7 +19,7 @@ namespace MB.Domain.ArticleCategoryAgg
             CreationDate = DateTime.Now;
 
         }
-        public ArticleCategory()
+        protected ArticleCategory()
         {
                 
         }
