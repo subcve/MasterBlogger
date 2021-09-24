@@ -1,0 +1,12 @@
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\bin\Debug\net5.0\MB.ApplicationContract.deps.json
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\bin\Debug\net5.0\MB.ApplicationContract.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\bin\Debug\net5.0\ref\MB.ApplicationContract.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\bin\Debug\net5.0\MB.ApplicationContract.pdb
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\obj\Debug\net5.0\MB.ApplicationContract.csproj.AssemblyReference.cache
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\obj\Debug\net5.0\MB.ApplicationContract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\obj\Debug\net5.0\MB.ApplicationContract.AssemblyInfoInputs.cache
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\obj\Debug\net5.0\MB.ApplicationContract.AssemblyInfo.cs
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\obj\Debug\net5.0\MB.ApplicationContract.csproj.CoreCompileInputs.cache
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\obj\Debug\net5.0\MB.ApplicationContract.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\obj\Debug\net5.0\ref\MB.ApplicationContract.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.ApplicationCantract\obj\Debug\net5.0\MB.ApplicationContract.pdb

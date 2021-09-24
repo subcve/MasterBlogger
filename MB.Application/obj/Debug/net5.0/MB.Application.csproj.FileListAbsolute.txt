@@ -1,0 +1,17 @@
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\bin\Debug\net5.0\MB.Application.deps.json
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\bin\Debug\net5.0\MB.Application.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\bin\Debug\net5.0\ref\MB.Application.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\bin\Debug\net5.0\MB.Application.pdb
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\bin\Debug\net5.0\MB.ApplicationContract.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\bin\Debug\net5.0\MB.Domain.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\bin\Debug\net5.0\MB.ApplicationContract.pdb
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\bin\Debug\net5.0\MB.Domain.pdb
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.csproj.AssemblyReference.cache
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.AssemblyInfoInputs.cache
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.AssemblyInfo.cs
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.csproj.CoreCompileInputs.cache
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.csproj.CopyComplete
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\obj\Debug\net5.0\ref\MB.Application.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.pdb
