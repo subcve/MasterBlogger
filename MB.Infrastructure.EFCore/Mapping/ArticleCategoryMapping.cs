@@ -15,6 +15,10 @@ namespace MB.Infrastructure.EFCore.Mapping
                 .IsRequired();
             builder.Property(c => c.CreationDate).IsRequired();
             builder.Property(c => c.IsRemoved).IsRequired();
+
+            builder.HasMany(c => c.Articles)
+                .WithOne(c => c.ArticleCategory)
+                .HasForeignKey(c => c.ArticleCategoryId);
         }
     }
 }
