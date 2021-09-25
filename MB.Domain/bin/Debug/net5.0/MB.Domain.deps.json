@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "MB.Domain/1.0.0": {
+        "dependencies": {
+          "MB.ApplicationContract": "1.0.0"
+        },
         "runtime": {
           "MB.Domain.dll": {}
+        }
+      },
+      "MB.ApplicationContract/1.0.0": {
+        "runtime": {
+          "MB.ApplicationContract.dll": {}
         }
       }
     }
   },
   "libraries": {
     "MB.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MB.ApplicationContract/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

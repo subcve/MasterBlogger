@@ -16,3 +16,5 @@ C:\Users\Peyman\source\repos\MasterBlogger\MB.Infrastructure.EFCore\obj\Debug\ne
 C:\Users\Peyman\source\repos\MasterBlogger\MB.Infrastructure.EFCore\obj\Debug\net5.0\ref\MB.Infrastructure.EFCore.dll
 C:\Users\Peyman\source\repos\MasterBlogger\MB.Infrastructure.EFCore\obj\Debug\net5.0\MB.Infrastructure.EFCore.pdb
 C:\Users\Peyman\source\repos\MasterBlogger\MB.Infrastructure.EFCore\obj\Debug\net5.0\MB.Infrastructure.EFCore.genruntimeconfig.cache
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Infrastructure.EFCore\bin\Debug\net5.0\MB.ApplicationContract.dll
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Infrastructure.EFCore\bin\Debug\net5.0\MB.ApplicationContract.pdb
