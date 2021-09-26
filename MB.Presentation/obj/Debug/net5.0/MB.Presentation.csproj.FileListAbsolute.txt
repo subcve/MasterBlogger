@@ -91,3 +91,4 @@ C:\Users\Peyman\source\repos\MasterBlogger\MB.Presentation\bin\Debug\net5.0\Micr
 C:\Users\Peyman\source\repos\MasterBlogger\MB.Presentation\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Create.cshtml.g.cs
 C:\Users\Peyman\source\repos\MasterBlogger\MB.Presentation\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Edit.cshtml.g.cs
 C:\Users\Peyman\source\repos\MasterBlogger\MB.Presentation\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleManagement\List.cshtml.g.cs
+C:\Users\Peyman\source\repos\MasterBlogger\MB.Presentation\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleManagement\Create.cshtml.g.cs
