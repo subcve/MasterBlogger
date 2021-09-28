@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Net.Mime;
 
 namespace MB.ApplicationContract.Article
 {
@@ -7,5 +6,7 @@ namespace MB.ApplicationContract.Article
     {
         List<ArticleViewModel> GetList();
         void Create(CreateArticle command);
+        void Edit(EditArticle command);
+        EditArticle Get(long id);
     }
 }
