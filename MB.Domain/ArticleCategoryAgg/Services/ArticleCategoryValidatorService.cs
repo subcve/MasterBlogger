@@ -1,4 +1,4 @@
-﻿using MB.Domain.ArticleCategoryAgg.Exceptions;
+﻿using MB.Domain.Exceptions;
 
 namespace MB.Domain.ArticleCategoryAgg.Services
 {

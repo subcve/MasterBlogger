@@ -1,4 +1,5 @@
 ﻿using System;
+using MB.Domain.ArticleAgg.Services;
 using MB.Domain.ArticleCategoryAgg;
 
 namespace MB.Domain.ArticleAgg
@@ -19,23 +20,33 @@ namespace MB.Domain.ArticleAgg
         {
             
         }
-        public Article(string title, string shortDescription, string content, string image, long articleCategoryId)
+        public Article(string title, string shortDescription, string content, string image, long articleCategoryId,IArticleValidatorServices validatorServices)
         {
+            CheckRecordNullOrEmpty(title);
+            validatorServices.CheckThatThisRecordAlreadyExist(title);
             Title = title;
+            CheckRecordNullOrEmpty(shortDescription);
             ShortDescription = shortDescription;
             Content = content;
+            CheckRecordNullOrEmpty(image);
             Image = image;
+            CheckRecordIsNotZero(articleCategoryId);
             ArticleCategoryId = articleCategoryId;
             IsRemoved = false;
             CreationDate = DateTime.Now;
         }
 
-        public void Edit(string title, string shortDescription, string content, string image, long articleCategoryId)
+        public void Edit(string title, string shortDescription, string content, string image, long articleCategoryId,IArticleValidatorServices validatorServices)
         {
+            CheckRecordNullOrEmpty(title);
+            validatorServices.CheckThatThisRecordAlreadyExist(title);
             Title = title;
+            CheckRecordNullOrEmpty(shortDescription);
             ShortDescription = shortDescription;
             Content = content;
+            CheckRecordNullOrEmpty(image);
             Image = image;
+            CheckRecordIsNotZero(articleCategoryId);
             ArticleCategoryId = articleCategoryId;
         }
 
@@ -46,6 +57,17 @@ namespace MB.Domain.ArticleAgg
         public void Restore()
         {
             IsRemoved = false;
+        }
+
+        private static void CheckRecordNullOrEmpty(string variable)
+        {
+            if (string.IsNullOrWhiteSpace(variable))
+                throw new ArgumentNullException();
+        }
+        private static void CheckRecordIsNotZero(long variable)
+        {
+            if (variable == 0)
+                throw new ArgumentOutOfRangeException();
         }
     }
 }

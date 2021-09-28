@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MB.Domain.ArticleCategoryAgg.Exceptions
+namespace MB.Domain.Exceptions
 {
     public class DuplicatedRecordException : Exception
     {
