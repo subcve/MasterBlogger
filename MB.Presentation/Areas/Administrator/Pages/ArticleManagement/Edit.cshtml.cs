@@ -25,6 +25,7 @@ namespace MB.Presentation.Areas.Administrator.Pages.ArticleManagement
         {
             Article = _articleApplication.Get(id);
             ArticleCategories = _articleCategoryApplication.List()
+                .Where(c=>c.IsRemoved == false)
                 .Select(c => new SelectListItem(c.Title, c.Id
                     .ToString())).ToList();
         }

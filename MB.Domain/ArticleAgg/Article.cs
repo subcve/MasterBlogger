@@ -38,5 +38,14 @@ namespace MB.Domain.ArticleAgg
             Image = image;
             ArticleCategoryId = articleCategoryId;
         }
+
+        public void Remove()
+        {
+            IsRemoved = true;
+        }
+        public void Restore()
+        {
+            IsRemoved = false;
+        }
     }
 }

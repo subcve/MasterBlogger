@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using MB.ApplicationContract.Article;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MB.Presentation.Areas.Administrator.Pages.ArticleManagement
@@ -18,6 +20,19 @@ namespace MB.Presentation.Areas.Administrator.Pages.ArticleManagement
         public void OnGet()
         {
             Articles = _articleApplication.GetList();
+        }
+
+        public RedirectToPageResult OnPostRemove(long id)
+        {
+            _articleApplication.Remove(id);
+            return
+            RedirectToPage("./List");
+        }
+        public RedirectToPageResult OnPostRestore(long id)
+        {
+            _articleApplication.Restore(id);
+            return
+            RedirectToPage("./list");
         }
     }
 }
