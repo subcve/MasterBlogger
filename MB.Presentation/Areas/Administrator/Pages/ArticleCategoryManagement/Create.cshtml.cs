@@ -7,8 +7,7 @@ namespace MB.Presentation.Areas.Administrator.Pages.ArticleCategoryManagement
     public class CreateModel : PageModel
     {
         private readonly IArticleCategoryApplication _articleCategoryApplication;
-        //[BindProperty]
-        //public CreateArticleCategory ArticleCategory { get; set; }
+        
         public CreateModel(IArticleCategoryApplication articleCategoryApplication)
         {
             _articleCategoryApplication = articleCategoryApplication;

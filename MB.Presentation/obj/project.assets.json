@@ -1552,6 +1552,7 @@
           "MB.Application": "1.0.0",
           "MB.ApplicationContract": "1.0.0",
           "MB.Infrastructure.EFCore": "1.0.0",
+          "MB.Infrastructure.Query": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "5.0.2"
         },
         "compile": {
@@ -1573,6 +1574,19 @@
         },
         "runtime": {
           "bin/placeholder/MB.Infrastructure.EFCore.dll": {}
+        }
+      },
+      "MB.Infrastructure.Query/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "MB.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MB.Infrastructure.Query.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MB.Infrastructure.Query.dll": {}
         }
       }
     }
@@ -5843,12 +5857,18 @@
       "type": "project",
       "path": "../MB.Infrastructure.EFCore/MB.Infrastructure.EFCore.csproj",
       "msbuildProject": "../MB.Infrastructure.EFCore/MB.Infrastructure.EFCore.csproj"
+    },
+    "MB.Infrastructure.Query/1.0.0": {
+      "type": "project",
+      "path": "../MB.Infrastructure.Query/MB.Infrastructure.Query.csproj",
+      "msbuildProject": "../MB.Infrastructure.Query/MB.Infrastructure.Query.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "MB.ApplicationContract >= 1.0.0",
       "MB.Infrastructure.Core >= 1.0.0",
+      "MB.Infrastructure.Query >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.10"
     ]
   },
@@ -5888,6 +5908,9 @@
             },
             "C:\\Users\\Peyman\\source\\repos\\MasterBlogger\\MB.Infrastructure.Core\\MB.Infrastructure.Core.csproj": {
               "projectPath": "C:\\Users\\Peyman\\source\\repos\\MasterBlogger\\MB.Infrastructure.Core\\MB.Infrastructure.Core.csproj"
+            },
+            "C:\\Users\\Peyman\\source\\repos\\MasterBlogger\\MB.Infrastructure.Query\\MB.Infrastructure.Query.csproj": {
+              "projectPath": "C:\\Users\\Peyman\\source\\repos\\MasterBlogger\\MB.Infrastructure.Query\\MB.Infrastructure.Query.csproj"
             }
           }
         }

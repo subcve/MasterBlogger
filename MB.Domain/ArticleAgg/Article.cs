@@ -36,10 +36,9 @@ namespace MB.Domain.ArticleAgg
             CreationDate = DateTime.Now;
         }
 
-        public void Edit(string title, string shortDescription, string content, string image, long articleCategoryId,IArticleValidatorServices validatorServices)
+        public void Edit(string title, string shortDescription, string content, string image, long articleCategoryId)
         {
             CheckRecordNullOrEmpty(title);
-            validatorServices.CheckThatThisRecordAlreadyExist(title);
             Title = title;
             CheckRecordNullOrEmpty(shortDescription);
             ShortDescription = shortDescription;
