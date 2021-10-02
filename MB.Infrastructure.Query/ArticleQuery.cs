@@ -22,6 +22,7 @@ namespace MB.Infrastructure.Query
                 .Include(c => c.ArticleCategory)
                 .Select(c => new ArticleQueryViewModel
                 {
+                    Id = c.Id,
                     Title = c.Title,
                     ArticleCategory = c.ArticleCategory.Title,
                     CreationDate = c.CreationDate.ToString(CultureInfo.InvariantCulture),
@@ -30,6 +31,33 @@ namespace MB.Infrastructure.Query
                     ShortDescription = c.ShortDescription
                 }).ToList();
         }
+
+        public ArticleQueryViewModel GetArticle(long id)
+        {
+            return _context.Articles.Where(c => c.IsRemoved == false)
+                .Include(c => c.ArticleCategory)
+                .Select(c => new ArticleQueryViewModel
+                {
+                    Id = c.Id,
+                    Title = c.Title,
+                    ArticleCategory = c.ArticleCategory.Title,
+                    CreationDate = c.CreationDate.ToString(CultureInfo.InvariantCulture),
+                    LasTimeSinceCreation = DateToTitle(c.CreationDate),
+                    Image = c.Image,
+                    ShortDescription = c.ShortDescription,
+                    Content = c.Content,
+                }).FirstOrDefault(c => c.Id == id);
+        }
+
+        public ArticleQueryViewModel GetLastArticle()
+        {
+            return _context.Articles.Where(c => c.IsRemoved == false)
+                .Select(c => new ArticleQueryViewModel
+                {
+                    Id = c.Id
+                }).OrderByDescending(c=>c.Id).FirstOrDefault();
+        }
+
         public static string DateToTitle(DateTime dateTime)
         {
 
