@@ -2,6 +2,6 @@
 {
     public interface ICommentApplication
     {
-
+        void Add(CreateComment command);
     }
 }

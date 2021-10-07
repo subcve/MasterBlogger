@@ -11,14 +11,14 @@ namespace MB.Domain.CommentAgg
         public string Message { get; private set; }
         public int Status { get; private set; }
         public DateTime CreationDate { get; private set; }
-        public int ArticleId { get; private set; }
+        public long ArticleId { get; private set; }
         public Article Article { get; private set; }
 
         protected Comment()
         {
             
         }
-        public Comment(string name, string email, string message, int articleId)
+        public Comment(string name, string email, string message, long articleId)
         {
             Name = name;
             Email = email;
