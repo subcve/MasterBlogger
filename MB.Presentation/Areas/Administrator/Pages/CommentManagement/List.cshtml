@@ -47,19 +47,18 @@
                         </td>
                         <td>@comments.CreationDate</td>
                         <td>
-                            <a class="btn btn-warning float-left mr-3" asp-page="./Edit" asp-route-id="@comments.Id">Edit</a>
                             @if (comments.Statuses == Statuses.New)
                             {
                                 <form method="post" asp-page-handler="Accept" class="float-left">
                                     <button class="btn btn-success">Accept</button>
-                                    <input type="hidden" name="id" value="@comments.Id"/>
+                                    <input type="hidden" name="id" value="@comments.Id" />
                                 </form>
 
 
-                                
+
                                 <form method="post" asp-page-handler="Reject" class="float-left">
                                     <button class="btn btn-danger">Reject</button>
-                                    <input type="hidden" name="id" value="@comments.Id"/>
+                                    <input type="hidden" name="id" value="@comments.Id" />
                                 </form>
                             }
                         </td>

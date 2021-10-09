@@ -1,4 +1,6 @@
-﻿namespace MB.Infrastructure.Query
+﻿using System.Collections.Generic;
+
+namespace MB.Infrastructure.Query
 {
     public class ArticleQueryViewModel
     {
@@ -10,5 +12,7 @@
         public string Image { get; set; }
         public string ArticleCategory { get; set; }
         public string Content { get; set; }
+        public long CommentCount { get; set; }
+        public List<CommentQueryViewModel> Comments { get; set; }
     }
 }

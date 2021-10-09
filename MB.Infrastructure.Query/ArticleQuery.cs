@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using MB.Domain.CommentAgg;
 using MB.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,7 @@ namespace MB.Infrastructure.Query
         public List<ArticleQueryViewModel> GetArticles()
         {
             return _context.Articles.Where(c => c.IsRemoved == false)
+                .Include(c=>c.Comments)
                 .Include(c => c.ArticleCategory)
                 .Select(c => new ArticleQueryViewModel
                 {
@@ -28,7 +30,8 @@ namespace MB.Infrastructure.Query
                     CreationDate = c.CreationDate.ToString(CultureInfo.InvariantCulture),
                     LasTimeSinceCreation = DateToTitle(c.CreationDate),
                     Image = c.Image,
-                    ShortDescription = c.ShortDescription
+                    ShortDescription = c.ShortDescription,
+                    CommentCount = c.Comments.Count(z => z.Status == Statuses.Confirm),
                 }).ToList();
         }
 
@@ -46,9 +49,24 @@ namespace MB.Infrastructure.Query
                     Image = c.Image,
                     ShortDescription = c.ShortDescription,
                     Content = c.Content,
+                    CommentCount = c.Comments.Count(z => z.Status == Statuses.Confirm),
+                    Comments = MapComments(c.Comments.Where(z => z.Status == Statuses.Confirm))
                 }).FirstOrDefault(c => c.Id == id);
         }
-
+        private static List<CommentQueryViewModel> MapComments(IEnumerable<Comment> comments)
+        {
+            var res = new List<CommentQueryViewModel>();
+            foreach (var comment in comments)
+            {
+                res.Add(new CommentQueryViewModel
+                {
+                    Name = comment.Name,
+                    Message = comment.Message,
+                    CreationDate = comment.CreationDate.ToString(CultureInfo.InvariantCulture)
+                });
+            }
+            return res;
+        }
         public ArticleQueryViewModel GetLastArticle()
         {
             return _context.Articles.Where(c => c.IsRemoved == false)
