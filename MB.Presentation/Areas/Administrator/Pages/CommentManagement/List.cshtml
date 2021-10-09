@@ -1,0 +1,71 @@
+﻿@page
+@using MB.Domain.CommentAgg
+@model MB.Presentation.Areas.Administrator.Pages.CommentManagement.ListModel
+@{
+    ViewData["Title"] = "Comment List";
+}
+<div class="card">
+    <div class="card-header">
+        <h3 class="float-left">Comment List</h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Article</th>
+                    <th>Status</th>
+                    <th>CreationDate</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var comments in Model.Comments)
+                {
+                    <tr>
+                        <td>@comments.Id</td>
+                        <td>@comments.Name</td>
+                        <td>@comments.Email</td>
+                        <td>@comments.Message</td>
+                        <td>@comments.Article</td>
+                        <td>
+                            @if (comments.Statuses == Statuses.New)
+                            {
+                                <i class="fa fa-eye fa-2x text-info"></i>
+                            }
+                            @if (comments.Statuses == Statuses.Confirm)
+                            {
+                                <i class="fa fa-check fa-2x text-success"></i>
+                            }
+                            @if (comments.Statuses == Statuses.Canceled)
+                            {
+                                <i class="fa fa-close fa-2x text-danger"></i>
+                            }
+                        </td>
+                        <td>@comments.CreationDate</td>
+                        <td>
+                            <a class="btn btn-warning float-left mr-3" asp-page="./Edit" asp-route-id="@comments.Id">Edit</a>
+                            @if (comments.Statuses == Statuses.New)
+                            {
+                                <form method="post" asp-page-handler="Accept" class="float-left">
+                                    <button class="btn btn-success">Accept</button>
+                                    <input type="hidden" name="id" value="@comments.Id"/>
+                                </form>
+
+
+                                
+                                <form method="post" asp-page-handler="Reject" class="float-left">
+                                    <button class="btn btn-danger">Reject</button>
+                                    <input type="hidden" name="id" value="@comments.Id"/>
+                                </form>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
